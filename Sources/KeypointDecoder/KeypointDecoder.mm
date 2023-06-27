@@ -269,7 +269,7 @@ float sign(float A){
       int angle = static_cast<int>(std::atan2(difference.y, difference.x) * 180 / CV_PI);
       std::vector<cv::Point> polygon;
       cv::ellipse2Poly(cv::Point2d(meanX, meanY), cv::Size2d(length / 2, stickWidth), angle, 0, 360, 1, polygon);
-      cv::fillConvexPoly(pane, polygon, colors[limbKeypointsId.second]);
+      //cv::fillConvexPoly(pane, polygon, colors[limbKeypointsId.second]);
     }
   }
   cv::addWeighted(outputImg, 0.4, pane, 0.6, 0, outputImg);
