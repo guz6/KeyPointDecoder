@@ -275,10 +275,10 @@ float sign(float A){
   cv::addWeighted(outputImg, 0.4, pane, 0.6, 0, outputImg);
   
   std::vector<float> _boxes(&boxes[0], boxes + peopleNum * 4);
-  for (int j = 0; j < peopleNum; ++j) {
-    std::vector<float> box = { _boxes[j*4], _boxes[j*4+1], _boxes[j*4+2], _boxes[j*4+3] };
-    cv::rectangle(outputImg, cv::Point(box[0], box[1]), cv::Point(box[2] + box[0], box[3] + box[1]), cv::Scalar(255,0,0), 2);
-  }
+  // for (int j = 0; j < peopleNum; ++j) {
+  //   std::vector<float> box = { _boxes[j*4], _boxes[j*4+1], _boxes[j*4+2], _boxes[j*4+3] };
+  //   cv::rectangle(outputImg, cv::Point(box[0], box[1]), cv::Point(box[2] + box[0], box[3] + box[1]), cv::Scalar(255,0,0), 2);
+  // }
   
   UIImage *preview = MatToUIImage(outputImg);
   outputImg.release();
