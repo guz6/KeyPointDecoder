@@ -243,7 +243,7 @@ float sign(float A){
   for (auto& pose : poses) {
     for (size_t keypointIdx = 0; keypointIdx < pose.keypoints.size(); keypointIdx++) {
       if (pose.keypoints[keypointIdx] != absentKeypoint) {
-        cv::circle(outputImg, pose.keypoints[keypointIdx], 2, colors[keypointIdx], -1);
+        cv::circle(outputImg, pose.keypoints[keypointIdx], 10, colors[keypointIdx], -1);
       }
     }
   }
